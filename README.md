@@ -1,8 +1,7 @@
 # Pairs Trading Lab
 
-An intermediate, educational statistical-arbitrage project that finds related
-stocks, models their equilibrium relationship, trades temporary spread
-divergences, and evaluates the result on unseen data.
+A project that finds related stocks, models their equilibrium relationship, 
+trades temporary spread divergences, and evaluates the result on unseen data.
 
 The project is designed to teach research discipline—not to manufacture an
 impressive backtest. It includes deterministic sample data, pair discovery,
@@ -11,28 +10,6 @@ diagnostic plots, and optional Alpaca data and **paper-only** order submission.
 
 > This is educational software, not investment advice. A profitable historical
 > simulation does not establish that a strategy will remain profitable.
-
-## Documentation
-
-- [Complete code walkthrough](docs/CODE_WALKTHROUGH.md): the math, information
-  timing, every module, important expressions, tests, and failure modes
-- [Guided lessons](docs/LEARNING_GUIDE.md): eight hands-on exercises in increasing
-  difficulty
-- [GitHub setup](docs/GITHUB_SETUP.md): publish this local repository and verify CI
-- [Contributing](CONTRIBUTING.md): development and research-validity requirements
-- [Security](SECURITY.md): API-key handling and the paper-execution boundary
-
-## What you will learn
-
-- Why correlation is not the same as cointegration
-- How linear regression estimates a hedge ratio
-- How a spread becomes a standardized z-score
-- How stateful entry, exit, and stop rules work
-- How look-ahead and selection bias enter a backtest
-- How turnover, slippage, and two-leg execution affect results
-- How to integrate research code with an external market-data/trading API
-
-Start with [the guided lessons](docs/LEARNING_GUIDE.md) after running the demo.
 
 ## Quick start
 
