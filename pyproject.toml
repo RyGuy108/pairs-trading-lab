@@ -1,0 +1,68 @@
+[build-system]
+requires = ["setuptools>=70"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pairs-trading-lab"
+version = "0.1.0"
+description = "A leakage-aware, educational statistical-arbitrage project"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["algorithmic-trading", "cointegration", "pairs-trading", "quantitative-finance"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Education",
+  "Intended Audience :: Financial and Insurance Industry",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
+  "Topic :: Education",
+  "Topic :: Office/Business :: Financial :: Investment",
+]
+dependencies = [
+  "matplotlib>=3.8",
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "scikit-learn>=1.4",
+  "statsmodels>=0.14",
+]
+
+[project.optional-dependencies]
+alpaca = [
+  "alpaca-py>=0.30",
+  "python-dotenv>=1.0",
+]
+dev = [
+  "build>=1.2",
+  "pytest>=8.0",
+  "ruff>=0.8",
+]
+all = [
+  "alpaca-py>=0.30",
+  "python-dotenv>=1.0",
+  "build>=1.2",
+  "pytest>=8.0",
+  "ruff>=0.8",
+]
+
+[project.scripts]
+pairs-trading = "pairs_trading.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
